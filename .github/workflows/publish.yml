@@ -12,13 +12,16 @@ jobs:
       - uses: actions/checkout@master
       - name: Setup Node
         uses: actions/setup-node@v1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           node-version: '14.x'
+          token: ${{ secrets.NPM_TOKEN }}
       - name: Npm Install
         run: npm ci --silent
       - name: Build
         run: npm build
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
