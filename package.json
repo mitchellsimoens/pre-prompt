@@ -1,0 +1,70 @@
+{
+  "name": "@mitchellsimoens/pre-prompt",
+  "version": "0.0.1",
+  "description": "Asks the user for confirmation to proceed in a pre script.",
+  "main": "lib/index.js",
+  "bin": "bin/pre-prompt.js",
+  "files": [
+    "bin/**/*",
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "build:check": "tsc --noEmit -p .",
+    "lint-staged": "lint-staged",
+    "lint": "eslint 'bin/**/*.js' 'src/**/*.ts'",
+    "prestart": "node -r ts-node/register src/vscode.ts",
+    "start": "echo \"hit!\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{bin,src}/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "Mitchell Simoens <mitchellsimoens@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/mitchellsimoens/workspacinator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchellsimoens/workspacinator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitchellsimoens/workspacinator/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "prompt",
+    "pre",
+    "script",
+    "prescript",
+    "command",
+    "execute",
+    "spawn"
+  ],
+  "devDependencies": {
+    "@types/node": "14.0.13",
+    "@typescript-eslint/eslint-plugin": "3.3.0",
+    "@typescript-eslint/parser": "3.3.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jest": "23.13.2",
+    "eslint-plugin-jsx-a11y": "6.3.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.5"
+  }
+}
