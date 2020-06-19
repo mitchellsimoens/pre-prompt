@@ -3,7 +3,7 @@ name: npm-publish
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   publish:
@@ -13,11 +13,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: '14.x'
       - name: Npm Install
         run: npm ci --silent
       - name: Build
         run: npm build
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}

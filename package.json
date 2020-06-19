@@ -29,13 +29,13 @@
   },
   "author": "Mitchell Simoens <mitchellsimoens@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/mitchellsimoens/workspacinator#readme",
+  "homepage": "https://github.com/mitchellsimoens/pre-publish#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mitchellsimoens/workspacinator.git"
+    "url": "git+https://github.com/mitchellsimoens/pre-publish.git"
   },
   "bugs": {
-    "url": "https://github.com/mitchellsimoens/workspacinator/issues"
+    "url": "https://github.com/mitchellsimoens/pre-publish/issues"
   },
   "publishConfig": {
     "access": "public"
