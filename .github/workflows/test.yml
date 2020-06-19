@@ -1,0 +1,31 @@
+name: Lint & Build Check
+
+on: push
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Npm Install
+        run: npm ci --silent
+      - name: Lint
+        run: npm run lint
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Npm Install
+        run: npm ci --silent
+      - name: Lint
+        run: npm run build:check
