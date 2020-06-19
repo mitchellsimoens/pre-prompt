@@ -29,13 +29,13 @@
   },
   "author": "Mitchell Simoens <mitchellsimoens@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/mitchellsimoens/pre-publish#readme",
+  "homepage": "https://github.com/mitchellsimoens/pre-prompt#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mitchellsimoens/pre-publish.git"
+    "url": "git+https://github.com/mitchellsimoens/pre-prompt.git"
   },
   "bugs": {
-    "url": "https://github.com/mitchellsimoens/pre-publish/issues"
+    "url": "https://github.com/mitchellsimoens/pre-prompt/issues"
   },
   "publishConfig": {
     "access": "public"
