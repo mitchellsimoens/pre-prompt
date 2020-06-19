@@ -16,7 +16,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           node-version: '14.x'
-          token: ${{ secrets.NPM_TOKEN }}
       - name: Npm Install
         run: npm ci --silent
       - name: Build
@@ -25,3 +24,5 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
