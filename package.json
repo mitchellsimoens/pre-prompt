@@ -1,6 +1,6 @@
 {
   "name": "@mitchellsimoens/pre-prompt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Asks the user for confirmation to proceed in a pre script.",
   "main": "lib/index.js",
   "bin": "bin/pre-prompt.js",
