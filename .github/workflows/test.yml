@@ -54,7 +54,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: 14
       - name: Download build.zip
         uses: actions/download-artifact@v2
         with:
@@ -73,7 +73,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: 14
       - name: Download build.zip
         uses: actions/download-artifact@v2
         with:

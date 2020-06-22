@@ -1,5 +1,6 @@
 <h1 align="center">Welcome to pre-prompt 👋</h1>
 
+[![GitHub release](https://img.shields.io/github/v/release/mitchellsimoens/pre-prompt)](https://github.com/mitchellsimoens/pre-prompt/releases)
 [![npm](https://img.shields.io/npm/v/@mitchellsimoens/pre-prompt.svg)](https://www.npmjs.com/package/@mitchellsimoens/pre-prompt)
 [![npm](https://img.shields.io/npm/dm/@mitchellsimoens/pre-prompt.svg)](https://www.npmjs.com/package/@mitchellsimoens/pre-prompt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
