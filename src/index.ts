@@ -9,7 +9,7 @@ const prompt = (question: string): Promise<string> => {
   });
 };
 
-const choiceRe = /^\s*(yes|sure|yep|ok)\s*$/i;
+const choiceRe = /^\s*(y|yes|sure|yep|ok)\s*$/i;
 
 const run = async (): Promise<void> => {
   const choice = await prompt('Are you sure you want to run that? (no)');
