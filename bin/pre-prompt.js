@@ -1,4 +1,6 @@
 #! /usr/bin/env node
 
 // eslint-disable-next-line import/no-unresolved,@typescript-eslint/no-var-requires
-require('../lib/index')(process.argv.slice(2));
+const { default: prompt } = require('../lib/index.js');
+
+prompt(process.argv.slice(2));
