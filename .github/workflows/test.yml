@@ -3,42 +3,16 @@ name: Lint & Build Check
 on: push
 
 jobs:
-  install:
-    name: Npm Install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the git branch
-        uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: npm ci
-      - name: Zip node_modules
-        run: zip -9qry "node_modules.zip" "./" -i "node_modules/*" -i "*/node_modules/*"
-      - name: Upload node_modules.zip
-        uses: actions/upload-artifact@v2
-        with:
-          name: node_modules.zip
-          path: node_modules.zip
-
   build:
-    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Download node_modules.zip
-        uses: actions/download-artifact@v2
-        with:
-          name: node_modules.zip
-      - name: Unzip node_modules.zip
-        run: unzip -q node_modules.zip
-      - run: npm run lint
-      - run: npm run build
+      - run: npm ci
       - name: Zip lib/node_modules
-        run: zip -9qry "build.zip" "./" -i "node_modules/*" -i "*/node_modules/*" -i "lib/*"
+        run: zip -9qry "build.zip" "./" -i "node_modules/*" -i "lib/*"
       - name: Upload build.zip
         uses: actions/upload-artifact@v2
         with:
