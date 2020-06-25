@@ -87,7 +87,6 @@ jobs:
           name: build.zip
       - name: Unzip build.zip
         run: unzip -q build.zip
-      - run: echo registry=https://npm.pkg.github.com/mitchellsimoens >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
